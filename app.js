@@ -18,3 +18,24 @@ function updateCaseNumber(product, price, isIncreasing) {
 
 }
 
+function getInputValue(product) {
+    const productInput = document.getElementById(product + "-number");
+    const productNumber = parseInt(productInput.value);
+    return productNumber;
+}
+
+function calculateTotal() {
+    // const phoneInput= document.getElementById("phone-number").value;
+    // const phoneNumber= parseInt(phoneInput.value) ;
+    const phoneTotal = getInputValue('phone') * 1219;
+    const caseTotal = getInputValue('case') * 59;
+
+    const subTotal = phoneTotal + caseTotal;
+    const taxAmount = subTotal / 10;
+    const totalPrice = subTotal + taxAmount;
+    //console.log(subtotal);
+    document.getElementById('sub-total').innerText = subTotal;
+    document.getElementById('tax-amount').innerText = taxAmount;
+    document.getElementById('total-price').innerText = totalPrice;
+}
+
