@@ -39,3 +39,14 @@ function calculateTotal() {
     document.getElementById('total-price').innerText = totalPrice;
 }
 
+// phone increase decrease
+
+
+document.getElementById("phone-plus").addEventListener("click", function () {
+    updateCaseNumber('phone', 1219, true)
+});
+document.getElementById("phone-minus").addEventListener("click", function () {
+    updateCaseNumber('phone', 1219, false)
+});
+// handle the case increase decrease
+
