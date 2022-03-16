@@ -50,3 +50,16 @@ document.getElementById("phone-minus").addEventListener("click", function () {
 });
 // handle the case increase decrease
 
+document.getElementById("case-plus").addEventListener('click', function () {
+    /* const caseInput = document.getElementById("case-number");
+     const caseNumber = caseInput.value;
+    caseInput.value = parseInt(caseNumber) + 1;*/
+    updateCaseNumber('case', 59, true);
+});
+
+document.getElementById("case-minus").addEventListener('click', function () {
+    /*const caseInput = document.getElementById("case-number");
+    const caseNumber = caseInput.value;
+    caseInput.value = parseInt(caseNumber) - 1;*/
+    updateCaseNumber('case', 59, false);
+});
